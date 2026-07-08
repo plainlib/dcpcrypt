@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="5">
+    <PathDelim Value="\"/>
+    <Name Value="dcpcrypt"/>
+    <Type Value="RunAndDesignTime"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <IncludeFiles Value="Hashes;Ciphers"/>
+        <OtherUnitFiles Value="Hashes;Ciphers"/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Files>
+      <Item>
+        <Filename Value="DCPbase64.pas"/>
+        <UnitName Value="DCPbase64"/>
+      </Item>
+      <Item>
+        <Filename Value="DCPblockciphers.pas"/>
+        <UnitName Value="DCPblockciphers"/>
+      </Item>
+      <Item>
+        <Filename Value="DCPconst.pas"/>
+        <UnitName Value="DCPconst"/>
+      </Item>
+      <Item>
+        <Filename Value="DCPcrypt2.pas"/>
+        <UnitName Value="DCPcrypt2"/>
+      </Item>
+      <Item>
+        <Filename Value="DCPreg.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="DCPreg"/>
+      </Item>
+      <Item>
+        <Filename Value="Hashes\DCPhaval.pas"/>
+        <UnitName Value="DCPhaval"/>
+      </Item>
+      <Item>
+        <Filename Value="Hashes\DCPhaval3.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Hashes\DCPhaval4.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Hashes\DCPhaval5.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Hashes\DCPmd4.pas"/>
+        <UnitName Value="DCPmd4"/>
+      </Item>
+      <Item>
+        <Filename Value="Hashes\DCPmd5.pas"/>
+        <UnitName Value="DCPmd5"/>
+      </Item>
+      <Item>
+        <Filename Value="Hashes\DCPripemd128.pas"/>
+        <UnitName Value="DCPripemd128"/>
+      </Item>
+      <Item>
+        <Filename Value="Hashes\DCPripemd160.pas"/>
+        <UnitName Value="DCPripemd160"/>
+      </Item>
+      <Item>
+        <Filename Value="Hashes\DCPsha1.pas"/>
+        <UnitName Value="DCPsha1"/>
+      </Item>
+      <Item>
+        <Filename Value="Hashes\DCPsha256.pas"/>
+        <UnitName Value="DCPsha256"/>
+      </Item>
+      <Item>
+        <Filename Value="Hashes\DCPsha512.pas"/>
+        <UnitName Value="DCPsha512"/>
+      </Item>
+      <Item>
+        <Filename Value="Hashes\DCPtiger.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Hashes\DCPtiger.pas"/>
+        <UnitName Value="DCPtiger"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPblowfish.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPblowfish.pas"/>
+        <UnitName Value="DCPblowfish"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPcast128.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPcast128.pas"/>
+        <UnitName Value="DCPcast128"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPcast256.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPcast256.pas"/>
+        <UnitName Value="DCPcast256"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPdes.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPdes.pas"/>
+        <UnitName Value="DCPdes"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPgost.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPgost.pas"/>
+        <UnitName Value="DCPgost"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPice.pas"/>
+        <UnitName Value="DCPice"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPidea.pas"/>
+        <UnitName Value="DCPidea"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPmars.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPmars.pas"/>
+        <UnitName Value="DCPmars"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPmisty1.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPmisty1.pas"/>
+        <UnitName Value="DCPmisty1"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPrc2.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPrc2.pas"/>
+        <UnitName Value="DCPrc2"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPrc4.pas"/>
+        <UnitName Value="DCPrc4"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPrc5.pas"/>
+        <UnitName Value="DCPrc5"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPrc6.pas"/>
+        <UnitName Value="DCPrc6"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPrijndael.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPrijndael.pas"/>
+        <UnitName Value="DCPrijndael"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPserpent.pas"/>
+        <UnitName Value="DCPserpent"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPtea.pas"/>
+        <UnitName Value="DCPtea"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPtwofish.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="Ciphers\DCPtwofish.pas"/>
+        <UnitName Value="DCPtwofish"/>
+      </Item>
+      <Item>
+        <Filename Value="dcp.inc"/>
+        <Type Value="Include"/>
+      </Item>
+      <Item>
+        <Filename Value="DCPciphers.dcr"/>
+        <Type Value="Binary"/>
+      </Item>
+      <Item>
+        <Filename Value="DCPhashes.dcr"/>
+        <Type Value="Binary"/>
+      </Item>
+    </Files>
+    <RequiredPkgs>
+      <Item>
+        <PackageName Value="FCL"/>
+      </Item>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

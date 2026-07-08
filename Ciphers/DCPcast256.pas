@@ -226,9 +226,9 @@ begin
   if not fInitialized then
     raise EDCP_blockcipher.Create('Cipher not initialized');
   A[0]:= PDWord(@InData)^;
-  A[1]:= PDWord(PointerToInt(@InData)+4)^;
-  A[2]:= PDWord(PointerToInt(@InData)+8)^;
-  A[3]:= PDWord(PointerToInt(@InData)+12)^;
+  A[1]:= PDWord(PtrInt(@InData)+4)^;
+  A[2]:= PDWord(PtrInt(@InData)+8)^;
+  A[3]:= PDWord(PtrInt(@InData)+12)^;
 
   A[0]:= SwapDWord(A[0]);
   A[1]:= SwapDWord(A[1]);
@@ -289,9 +289,9 @@ begin
   A[3]:= SwapDWord(A[3]);
 
   PDWord(@OutData)^:= A[0];
-  PDWord(PointerToInt(@OutData)+4)^:= A[1];
-  PDWord(PointerToInt(@OutData)+8)^:= A[2];
-  PDWord(PointerToInt(@OutData)+12)^:= A[3];
+  PDWord(PtrInt(@OutData)+4)^:= A[1];
+  PDWord(PtrInt(@OutData)+8)^:= A[2];
+  PDWord(PtrInt(@OutData)+12)^:= A[3];
 end;
 
 procedure TDCP_cast256.DecryptECB(const InData; var OutData);
@@ -301,9 +301,9 @@ begin
   if not fInitialized then
     raise EDCP_blockcipher.Create('Cipher not initialized');
   A[0]:= PDWord(@InData)^;
-  A[1]:= PDWord(PointerToInt(@InData)+4)^;
-  A[2]:= PDWord(PointerToInt(@InData)+8)^;
-  A[3]:= PDWord(PointerToInt(@InData)+12)^;
+  A[1]:= PDWord(PtrInt(@InData)+4)^;
+  A[2]:= PDWord(PtrInt(@InData)+8)^;
+  A[3]:= PDWord(PtrInt(@InData)+12)^;
 
   A[0]:= SwapDWord(A[0]);
   A[1]:= SwapDWord(A[1]);
@@ -364,9 +364,9 @@ begin
   A[3]:= SwapDWord(A[3]);
 
   PDWord(@OutData)^:= A[0];
-  PDWord(PointerToInt(@OutData)+4)^:= A[1];
-  PDWord(PointerToInt(@OutData)+8)^:= A[2];
-  PDWord(PointerToInt(@OutData)+12)^:= A[3];
+  PDWord(PtrInt(@OutData)+4)^:= A[1];
+  PDWord(PtrInt(@OutData)+8)^:= A[2];
+  PDWord(PtrInt(@OutData)+12)^:= A[3];
 end;
 
 

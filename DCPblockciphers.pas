@@ -124,10 +124,14 @@ implementation
 
 
 { From XE2 and up the following flag enables conditional compiled pointer-code changes  }
-{$IF CompilerVersion >= 23}
-  {$DEFINE DELPHIXE2_UP}
-  {$POINTERMATH ON}
-{$IFEND}
+{$IFDEF FPC}
+  // FPC/Lazarus
+{$ELSE}
+  {$IF CompilerVersion >= 23}
+    {$DEFINE DELPHIXE2_UP}
+    {$POINTERMATH ON}
+  {$IFEND}
+{$ENDIF}
 
 {** TDCP_blockcipher64 ********************************************************}
 

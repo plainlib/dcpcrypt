@@ -461,9 +461,9 @@ begin
   if not fInitialized then
     raise EDCP_blockcipher.Create('Cipher not initialized');
   x[0]:= PDWord(@InData)^ xor SubKeys[INPUTWHITEN];
-  x[1]:= PDWord(PointerToInt(@InData)+4)^ xor SubKeys[INPUTWHITEN+1];
-  x[2]:= PDWord(PointerToInt(@InData)+8)^ xor SubKeys[INPUTWHITEN+2];
-  x[3]:= PDWord(PointerToInt(@InData)+12)^ xor SubKeys[INPUTWHITEN+3];
+  x[1]:= PDWord(PtrInt(@InData)+4)^ xor SubKeys[INPUTWHITEN+1];
+  x[2]:= PDWord(PtrInt(@InData)+8)^ xor SubKeys[INPUTWHITEN+2];
+  x[3]:= PDWord(PtrInt(@InData)+12)^ xor SubKeys[INPUTWHITEN+3];
   i:= 0;
   while i<= NUMROUNDS-2 do
   begin
@@ -486,10 +486,10 @@ begin
     x[0]:= (x[0] shr 1) or (x[0] shl 31);
     Inc(i,2);
   end;
-  PDWord(PointerToInt(@OutData)+ 0)^:= x[2] xor SubKeys[OUTPUTWHITEN];
-  PDWord(PointerToInt(@OutData)+ 4)^:= x[3] xor SubKeys[OUTPUTWHITEN+1];
-  PDWord(PointerToInt(@OutData)+ 8)^:= x[0] xor SubKeys[OUTPUTWHITEN+2];
-  PDWord(PointerToInt(@OutData)+12)^:= x[1] xor SubKeys[OUTPUTWHITEN+3];
+  PDWord(PtrInt(@OutData)+ 0)^:= x[2] xor SubKeys[OUTPUTWHITEN];
+  PDWord(PtrInt(@OutData)+ 4)^:= x[3] xor SubKeys[OUTPUTWHITEN+1];
+  PDWord(PtrInt(@OutData)+ 8)^:= x[0] xor SubKeys[OUTPUTWHITEN+2];
+  PDWord(PtrInt(@OutData)+12)^:= x[1] xor SubKeys[OUTPUTWHITEN+3];
 end;
 
 procedure TDCP_twofish.DecryptECB(const InData; var OutData);
@@ -501,9 +501,9 @@ begin
   if not fInitialized then
     raise EDCP_blockcipher.Create('Cipher not initialized');
   X[2]:= PDWord(@InData)^ xor SubKeys[OUTPUTWHITEN];
-  X[3]:= PDWord(PointerToInt(@InData)+4)^ xor SubKeys[OUTPUTWHITEN+1];
-  X[0]:= PDWord(PointerToInt(@InData)+8)^ xor SubKeys[OUTPUTWHITEN+2];
-  X[1]:= PDWord(PointerToInt(@InData)+12)^ xor SubKeys[OUTPUTWHITEN+3];
+  X[3]:= PDWord(PtrInt(@InData)+4)^ xor SubKeys[OUTPUTWHITEN+1];
+  X[0]:= PDWord(PtrInt(@InData)+8)^ xor SubKeys[OUTPUTWHITEN+2];
+  X[1]:= PDWord(PtrInt(@InData)+12)^ xor SubKeys[OUTPUTWHITEN+3];
   i:= NUMROUNDS-2;
   while i>= 0 do
   begin
@@ -526,10 +526,10 @@ begin
     x[3]:= (x[3] shr 1) or (x[3] shl 31);
     Dec(i,2);
   end;
-  PDWord(PointerToInt(@OutData)+ 0)^:= X[0] xor SubKeys[INPUTWHITEN];
-  PDWord(PointerToInt(@OutData)+ 4)^:= X[1] xor SubKeys[INPUTWHITEN+1];
-  PDWord(PointerToInt(@OutData)+ 8)^:= X[2] xor SubKeys[INPUTWHITEN+2];
-  PDWord(PointerToInt(@OutData)+12)^:= X[3] xor SubKeys[INPUTWHITEN+3];
+  PDWord(PtrInt(@OutData)+ 0)^:= X[0] xor SubKeys[INPUTWHITEN];
+  PDWord(PtrInt(@OutData)+ 4)^:= X[1] xor SubKeys[INPUTWHITEN+1];
+  PDWord(PtrInt(@OutData)+ 8)^:= X[2] xor SubKeys[INPUTWHITEN+2];
+  PDWord(PtrInt(@OutData)+12)^:= X[3] xor SubKeys[INPUTWHITEN+3];
 end;
 
 procedure PreCompMDS;
