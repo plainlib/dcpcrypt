@@ -144,7 +144,7 @@ begin
   if not fInitialized then
     raise EDCP_blockcipher.Create('Cipher not initialized');
   Pdword(@w[0])^:= Pdword(@InData)^;
-  Pdword(@w[2])^:= Pdword(PointerToInt(@InData)+4)^;
+  Pdword(@w[2])^:= Pdword(PtrInt(@InData)+4)^;
   for i:= 0 to 15 do
   begin
     j:= i*4;
@@ -161,7 +161,7 @@ begin
     end;
   end;
   Pdword(@OutData)^:= Pdword(@w[0])^;
-  Pdword(PointerToInt(@OutData)+4)^:= Pdword(@w[2])^;
+  Pdword(PtrInt(@OutData)+4)^:= Pdword(@w[2])^;
 end;
 
 procedure TDCP_rc2.DecryptECB(const InData; var OutData);
@@ -172,7 +172,7 @@ begin
   if not fInitialized then
     raise EDCP_blockcipher.Create('Cipher not initialized');
   Pdword(@w[0])^:= Pdword(@InData)^;
-  Pdword(@w[2])^:= Pdword(PointerToInt(@InData)+4)^;
+  Pdword(@w[2])^:= Pdword(PtrInt(@InData)+4)^;
   for i:= 15 downto 0 do
   begin
     j:= i*4;
@@ -189,7 +189,7 @@ begin
     end;
   end;
   Pdword(@OutData)^:= Pdword(@w[0])^;
-  Pdword(PointerToInt(@OutData)+4)^:= Pdword(@w[2])^;
+  Pdword(PtrInt(@OutData)+4)^:= Pdword(@w[2])^;
 end;
 
 end. 

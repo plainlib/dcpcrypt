@@ -196,9 +196,9 @@ begin
   if not fInitialized then
     raise EDCP_blockcipher.Create('Cipher not initialized');
   Blk[0]:= PDWord(@InData)^;
-  Blk[1]:= PDWord(PointerToInt(@InData)+4)^;
-  Blk[2]:= PDWord(PointerToInt(@InData)+8)^;
-  Blk[3]:= PDWord(PointerToInt(@InData)+12)^;
+  Blk[1]:= PDWord(PtrInt(@InData)+4)^;
+  Blk[2]:= PDWord(PtrInt(@InData)+8)^;
+  Blk[3]:= PDWord(PtrInt(@InData)+12)^;
 
   blk[0]:= blk[0] + KeyData[0]; blk[1]:= blk[1] + KeyData[1];
   blk[2]:= blk[2] + KeyData[2]; blk[3]:= blk[3] + KeyData[3];
@@ -446,9 +446,9 @@ begin
   blk[2]:= blk[2] - KeyData[38]; blk[3]:= blk[3] - KeyData[39];
 
   PDWord(@OutData)^:= Blk[0];
-  PDWord(PointerToInt(@OutData)+4)^:= Blk[1];
-  PDWord(PointerToInt(@OutData)+8)^:= Blk[2];
-  PDWord(PointerToInt(@OutData)+12)^:= Blk[3];
+  PDWord(PtrInt(@OutData)+4)^:= Blk[1];
+  PDWord(PtrInt(@OutData)+8)^:= Blk[2];
+  PDWord(PtrInt(@OutData)+12)^:= Blk[3];
 end;
 
 procedure TDCP_mars.DecryptECB(const InData; var OutData);
@@ -459,9 +459,9 @@ begin
   if not fInitialized then
     raise EDCP_blockcipher.Create('Cipher not initialized');
   Blk[0]:= PDWord(@InData)^;
-  Blk[1]:= PDWord(PointerToInt(@InData)+4)^;
-  Blk[2]:= PDWord(PointerToInt(@InData)+8)^;
-  Blk[3]:= PDWord(PointerToInt(@InData)+12)^;
+  Blk[1]:= PDWord(PtrInt(@InData)+4)^;
+  Blk[2]:= PDWord(PtrInt(@InData)+8)^;
+  Blk[3]:= PDWord(PtrInt(@InData)+12)^;
 
   blk[0]:= blk[0] + KeyData[36]; blk[1]:= blk[1] + KeyData[37];
   blk[2]:= blk[2] + KeyData[38]; blk[3]:= blk[3] + KeyData[39];
@@ -709,9 +709,9 @@ begin
   blk[2]:= blk[2] - KeyData[2]; blk[3]:= blk[3] - KeyData[3];
 
   PDWord(@OutData)^:= Blk[0];
-  PDWord(PointerToInt(@OutData)+4)^:= Blk[1];
-  PDWord(PointerToInt(@OutData)+8)^:= Blk[2];
-  PDWord(PointerToInt(@OutData)+12)^:= Blk[3];
+  PDWord(PtrInt(@OutData)+4)^:= Blk[1];
+  PDWord(PtrInt(@OutData)+8)^:= Blk[2];
+  PDWord(PtrInt(@OutData)+12)^:= Blk[3];
 end;
 
 end.
