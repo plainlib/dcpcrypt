@@ -12,15 +12,8 @@ uses
   DCPmd5, DCPripemd128, DCPripemd160, DCPsha1, DCPsha256, DCPsha512, DCPtiger, 
   DCPblowfish, DCPcast128, DCPcast256, DCPdes, DCPgost, DCPice, DCPidea, 
   DCPmars, DCPmisty1, DCPrc2, DCPrc4, DCPrc5, DCPrc6, DCPrijndael, DCPserpent, 
-  DCPtea, DCPtwofish, LazarusPackageIntf;
+  DCPtea, DCPtwofish;
 
 implementation
 
-procedure Register;
-begin
-  RegisterUnit('DCPreg', @DCPreg.Register);
-end;
-
-initialization
-  RegisterPackage('dcpcrypt', @Register);
 end.
