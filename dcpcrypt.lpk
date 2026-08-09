@@ -13,6 +13,11 @@
         <OtherUnitFiles Value="Hashes;Ciphers"/>
         <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
+      <Other>
+        <CompilerMessages>
+          <IgnoredMessages idx5024="True"/>
+        </CompilerMessages>
+      </Other>
     </CompilerOptions>
     <Description Value="DCPcrypt Cryptographic Component Library"/>
     <License Value="The MIT License
